@@ -5,17 +5,14 @@
 	<title>AngularJS</title>
 </head>
 <style>
-.red{
-	background: red;
-}
+
 </style>
 <body>
-
 <div ng-app="myApp">
-	<div ng-controller="myCon">
-		<div ng-class="{red: x > 5}" ng-if="x > 5">You Won</div>
-		<button ng-click="x = generateNum()" ng-init="x = 0">Click</button>
-		<p>Number is {{x}}</p>
+	<div ng-init="myProperty='wow,lxc'">
+		Surrounding scope: {{myProperty}}
+		<div my-inherit-scope-directive></div>
+		<div my-directive></div>
 	</div>
 </div>
 <script src="angular.min.js"></script>
