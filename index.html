@@ -9,11 +9,10 @@
 </style>
 <body>
 <div ng-app="myApp">
-	<div ng-controller="MainController">
-		OutSide myDirective: {{myProperty}}
-		<div my-directive ng-init="myProperty='WoW,lxc'">
-			Inside myDirective: {{myProperty}}
-		</div>
+	<div ng-init="myProperty='wow,lxc'">
+		Surrounding scope: {{myProperty}}
+		<div my-inherit-scope-directive></div>
+		<div my-directive></div>
 	</div>
 </div>
 <script src="angular.min.js"></script>
