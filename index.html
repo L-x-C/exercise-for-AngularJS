@@ -10,10 +10,11 @@
 <body>
 
 <div ng-app="myApp">
-	<div ng-controller="myCon">
-		<div ng-class="{red: x > 5}" ng-if="x > 5">You Won</div>
-		<button ng-click="x = generateNum()" ng-init="x = 0">Click</button>
-		<p>Number is {{x}}</p>
+	<div sidebox title="Links">
+		<ul>
+			<li>First link</li>
+			<li>Second link</li>
+		</ul>
 	</div>
 </div>
 <script src="angular.min.js"></script>
