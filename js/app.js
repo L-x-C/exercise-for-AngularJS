@@ -13,6 +13,19 @@ routerApp.config(function($stateProvider,$urlRouterProvider) {
 				}
 			}
 		})
-
+		.state('booklist', {
+            url: '/{bookType:[0-9]{1,4}}',
+			views:{
+				'': {
+					templateUrl: 'tpls/bookList.html'
+				},
+				'booktype@booklist': {
+					templateUrl: 'tpls/bookType.html'
+				},
+				'bookgrid@booklist': {
+					templateUrl: 'tpls/bookGrid.html'
+				}
+			}
+		})
 	
 });
