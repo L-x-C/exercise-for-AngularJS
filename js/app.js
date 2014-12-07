@@ -1,4 +1,11 @@
-var routerApp = angular.module('routerApp', ['ui.router']);
+var routerApp = angular.module('routerApp', ['ui.router', 'ngGrid', 'BookListModule']);
+
+routerApp.run(function($rootScope, $state, $stateParams) {
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
+});
+
+
 routerApp.config(function($stateProvider,$urlRouterProvider) {
 	$urlRouterProvider.otherwise('/index');
 	$stateProvider
@@ -27,5 +34,8 @@ routerApp.config(function($stateProvider,$urlRouterProvider) {
 				}
 			}
 		})
-	
+        .state('addbook', {
+            url: '/addbook',
+            templateUrl: 'tpls/addBookForm.html'
+        })
 });
