@@ -1,4 +1,4 @@
-var routerApp = angular.module('routerApp', ['ui.router', 'ngGrid', 'BookListModule']);
+var routerApp = angular.module('routerApp', ['ui.router', 'ngGrid', 'BookListModule', 'BookDetailModule']);
 
 routerApp.run(function($rootScope, $state, $stateParams) {
     $rootScope.$state = $state;
@@ -37,5 +37,9 @@ routerApp.config(function($stateProvider,$urlRouterProvider) {
         .state('addbook', {
             url: '/addbook',
             templateUrl: 'tpls/addBookForm.html'
+        })
+        .state('bookdetail', {
+        	url: '/bookdetail/:bookId',
+        	templateUrl: 'tpls/bookDetail.html'
         })
 });
